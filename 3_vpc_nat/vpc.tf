@@ -7,6 +7,7 @@ resource "aws_vpc" "main" {
     enable_classiclink = "false"
     tags = {
         Name = "main"
+        project = "training"
     }
 }
 

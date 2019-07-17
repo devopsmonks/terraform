@@ -15,7 +15,11 @@ create a new user terraform_user in aws iam, set access type programmatic access
 assign policy with admin access
 
 aws configure or
-touch .aws/credentials
+mkdir .aws
+create afile with name credentials
+for mac touch .aws/credentials
+copy paste below lines
+
 [terraform]
 aws_access_key_id = xxxxxxxxxxxxxxxxxxx
 aws_secret_access_key = xxx/xxxxxxxxxxxxx/xxxx
