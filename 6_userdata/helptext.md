@@ -6,10 +6,8 @@ assume root privialges
     sudo -s
 update apt-get and install python so to allow us to use python pip. 
     apt-get update
-    apt-get install mysql-client
 
-connect to db using below command
-    mysql -h <db host name> -u <db username> -p
 
-show databases;
-SELECT VERSION();
+
+
+check if docker is installed!!! Explore where docker is being installed from and how

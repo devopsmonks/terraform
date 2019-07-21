@@ -21,7 +21,7 @@ create a file
 to test how the instance got the permissions to access s3
     curl http://169.254.169.254/latest/meta-data/
 you can see list of mete data options to check, select iam
-    curl http://169.254.169.254/latest/meta-data/iam
+    curl http://169.254.169.254/latest/meta-data/iam/
 you can see the available options, select  security-credentials
     curl http://169.254.169.254/latest/meta-data/iam/security-credentials/
 you can see what permissions you are having, select s3-<bucketname>-role, this is the bucket name you have provided in the var.tf file.
