@@ -23,3 +23,6 @@ variable "INSTANCE_USERNAME" {
   default = "Terraform"
 }
 variable "INSTANCE_PASSWORD" { }
+variable "AWS_PROFILE" {
+  default = "terraform"
+}
