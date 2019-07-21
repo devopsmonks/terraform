@@ -3,9 +3,17 @@
 variable "AWS_REGION" {
   default = "eu-west-1"
 }
+<<<<<<< Updated upstream
 variable "AWS_PROFILE" {
   default = "terraform"
 }
+=======
+
+variable "AWS_PROFILE" {
+  default = "terraform"
+}
+
+>>>>>>> Stashed changes
 variable "AMIS" {
   type = "map"
   default = {
