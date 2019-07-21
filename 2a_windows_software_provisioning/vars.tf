@@ -12,6 +12,10 @@ variable "WIN_AMIS" {
   }
 }
 
+variable "AWS_PROFILE" {
+  default="terraform"
+}
+
 variable "PATH_TO_PUBLIC_KEY" {
   default = "../../.ssh/devopsmonks.pub"
 }

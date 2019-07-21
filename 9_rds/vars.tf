@@ -5,6 +5,10 @@ variable "PATH_TO_PUBLIC_KEY" {
   default = "../../.ssh/devopsmonks.pub"
 }
 
+variable "AWS_PROFILE" {
+  default = "terraform"
+}
+
 variable "PATH_TO_PRIVATE_KEY" {
   default = "../../.ssh/devopsmonks.pem"
 }

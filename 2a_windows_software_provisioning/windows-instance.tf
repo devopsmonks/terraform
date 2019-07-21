@@ -32,9 +32,10 @@ EOF
     destination = "C:/test.txt"
   }
   connection {
-    host = coalesce(self.public_ip, self.private_ip)
+ #   host = coalesce(self.public_ip, self.private_ip)
+ host = self.public_ip
     type = "winrm"
-    timeout = "10m"
+ #   timeout = "10m"
     user = "${var.INSTANCE_USERNAME}"
     password = "${var.INSTANCE_PASSWORD}"
   }

@@ -2,7 +2,7 @@
 
 set -ex
 
-vgchange -ay
+vgchange -ay # Resfresh lvm volume state 
 
 DEVICE_FS=`blkid -o value -s TYPE ${DEVICE} || echo ""`
 if [ "`echo -n $DEVICE_FS`" == "" ] ; then
@@ -17,12 +17,12 @@ if [ "`echo -n $DEVICE_FS`" == "" ] ; then
     fi
   done
   pvcreate ${DEVICE}
-  vgcreate data ${DEVICE}
-  lvcreate --name volume1 -l 100%FREE data
+  vgcreate data ${DEVICE} 
+  lvcreate --name volume1 -l 100%FREE data  #these three commands are part of lvm commands to create a linux volume
   mkfs.ext4 /dev/data/volume1
 fi
 mkdir -p /data
-echo '/dev/data/volume1 /data ext4 defaults 0 0' >> /etc/fstab
+echo '/dev/data/volume1 /data ext4 defaults 0 0' >> /etc/fstab 
 mount /data
 
 # install docker

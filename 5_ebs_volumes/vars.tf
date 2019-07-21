@@ -8,6 +8,8 @@ variable "PATH_TO_PUBLIC_KEY" {
 variable "PATH_TO_PRIVATE_KEY" {
   default = "../../.ssh/devopsmonks.pem"
 }
+
+
 variable "AMIS" {
   type = "map"
   default = {

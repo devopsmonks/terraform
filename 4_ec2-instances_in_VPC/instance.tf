@@ -10,4 +10,7 @@ resource "aws_instance" "example" {
 
   # the public SSH key
   key_name = "${aws_key_pair.devopsmonks.key_name}"
+  tags = {
+        Name = "4_ec2_main"
+    }
 }
