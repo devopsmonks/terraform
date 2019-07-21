@@ -3,6 +3,8 @@ resource "aws_key_pair" "devopsmonks" {
   public_key = "${file("${var.PATH_TO_PUBLIC_KEY}")}"
 }
 
+
+
 resource "aws_instance" "win-example" {
   ami = "${lookup(var.WIN_AMIS, var.AWS_REGION)}"
   instance_type = "t2.micro"
@@ -32,7 +34,8 @@ EOF
     destination = "C:/test.txt"
   }
   connection {
-    host = coalesce(self.public_ip, self.private_ip)
+    # host = coalesce(self.public_ip, self.private_ip)
+    host = "${aws_instance.win-example.public_ip}"
     type = "winrm"
     timeout = "10m"
     user = "${var.INSTANCE_USERNAME}"
