@@ -3,11 +3,17 @@
 variable "AWS_REGION" {
   default = "eu-west-1"
 }
+<<<<<<< HEAD
 
 variable "AWS_PROFILE" {
   default = "terraform"
 }
 
+=======
+variable "AWS_PROFILE" {
+  default = "terraform"
+}
+>>>>>>> master
 variable "AMIS" {
   type = "map"
   default = {
