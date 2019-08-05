@@ -16,10 +16,10 @@ resource "aws_autoscaling_group" "example-autoscaling" {
   health_check_type = "EC2"
   force_delete = true
 
-  tag {
-      key = "Name"
-      value = "ec2 instance"
-      propagate_at_launch = true
-  }
+  # tags = {
+  #     key = "Name"
+  #     value = "ec2 instance"
+  #     propagate_at_launch = true
+  # }
 }
 
