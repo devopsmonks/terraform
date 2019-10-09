@@ -1,12 +1,21 @@
 variable "AWS_REGION" {
   default = "eu-west-1"
 }
-variable "PATH_TO_PRIVATE_KEY" {
-  default = "mykey"
-}
+
 variable "PATH_TO_PUBLIC_KEY" {
-  default = "mykey.pub"
+  default = "../../.ssh/devopsmonks.pub"
 }
+
+variable "PATH_TO_PRIVATE_KEY" {
+  default = "../../.ssh/devopsmonks.pem"
+}
+
+
+
+variable "AWS_PROFILE" {
+  default = "terraform"
+}
+
 variable "AMIS" {
   type = "map"
   default = {
@@ -14,4 +23,6 @@ variable "AMIS" {
     us-west-2 = "ami-06b94666"
     eu-west-1 = "ami-844e0bf7"
   }
+
 }
+
