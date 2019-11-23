@@ -1,3 +1,15 @@
+terraform {
+  backend "s3" {
+    encrypt=true
+    bucket = "devopsmonks-terraform-state-storage"
+    dynamodb_table = "devopsmonks-terraform-state-lock"
+    key    = "global/s3/12_autoscaling.tfstate"
+    region = "eu-west-1"
+    # access_key = "<aws_access_key>"
+    # secret_key = "<aws_secret_key>"
+  }
+}
+
 resource "aws_launch_configuration" "example-launchconfig" {
   name_prefix          = "example-launchconfig"
   image_id             = "${lookup(var.AMIS, var.AWS_REGION)}"

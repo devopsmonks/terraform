@@ -1,8 +1,8 @@
 terraform {
   backend "s3" {
     encrypt=true
-    bucket = "devopsmonks_terraform-state-storage"
-    dynamodb_table = "devopsmonks_terraform-state-lock"
+    bucket = "devopsmonks-terraform-state-storage"
+    dynamodb_table = "devopsmonks-terraform-state-lock"
     key    = "state-lock-storage.keypath"
     region = "eu-west-1"
     # access_key = "<aws_access_key>"
