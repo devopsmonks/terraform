@@ -6,7 +6,7 @@ until [[ -f /var/lib/cloud/instance/boot-finished ]]; do
 done
 
 # install nginx
-apt-get update
+apt-get -y update
 apt-get -y install nginx
 
 # make sure nginx is started

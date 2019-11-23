@@ -19,10 +19,10 @@ resource "aws_autoscaling_group" "example-autoscaling" {
   load_balancers = ["${aws_elb.my-elb.name}"]
   force_delete = true
 
-  tag {
-      key = "Name"
-      value = "ec2 instance"
-      propagate_at_launch = true
-  }
+  # tags = {
+  #     key = "Name"
+  #     value = "ec2 instance"
+  #     propagate_at_launch = true
+  # }
 }
 
